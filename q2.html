@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Question 2</title>
+  <style>
+    body {
+      background-color: #f3e8ff;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 15px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #6d4c9b;
+      margin-bottom: 20px;
+    }
+
+    .option {
+      background-color: #d9b3ff;
+      border: none;
+      border-radius: 20px;
+      padding: 12px 25px;
+      margin: 10px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      width: 80%;
+      max-width: 300px;
+      transition: background-color 0.3s;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+
+    .option:hover {
+      background-color: #c58cff;
+    }
+
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff0ff;
+      border: 2px dashed #d7b8f8;
+      padding: 25px;
+      border-radius: 20px;
+      display: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      z-index: 10;
+    }
+
+    .popup p {
+      margin: 0;
+      font-size: 18px;
+      color: #a24bbf;
+    }
+
+    .popup button {
+      margin-top: 15px;
+      background-color: #d9b3ff;
+      color: white;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .popup button:hover {
+      background-color: #c58cff;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>What should you eat?</h2>
+
+  <button class="option" onclick="nextQuestion()">Dark chocolate with no sugar</button>
+  <button class="option" onclick="showPopup()">Regular chocolate with sugar</button>
+
+  <div class="popup" id="popup">
+    <p>🍫 Take care of your weight!</p>
+    <button onclick="hidePopup()">Oh right...</button>
+  </div>
+
+  <script>
+    function nextQuestion() {
+      window.location.href = "page4.html"; // We'll build this next
+    }
+
+    function showPopup() {
+      document.getElementById('popup').style.display = 'block';
+    }
+
+    function hidePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
