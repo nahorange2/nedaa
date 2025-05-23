@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Just For You</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f3e8ff;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .message-box {
+      background-color: #fff0ff;
+      border: 2px dashed #d7b8f8;
+      padding: 30px 20px;
+      border-radius: 20px;
+      width: 80%;
+      max-width: 400px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      font-size: 18px;
+      color: #444;
+    }
+
+    .message-box::before {
+      content: "💌";
+      display: block;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .button {
+      margin-top: 30px;
+      background-color: #d9b3ff;
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+
+    .button:hover {
+      background-color: #c58cff;
+    }
+  </style>
+</head>
+<body>
+  <div class="message-box">
+    put a message here
+  </div>
+  <button class="button" onclick="goToNextPage()">Let’s go! 🎉</button>
+
+  <script>
+    function goToNextPage() {
+      window.location.href = "page2.html"; // Make sure to create this file
+    }
+  </script>
+</body>
+</html>
